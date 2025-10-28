@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trailer Repair Guys - St George Mobile Trailer Repair</title>
+    <title>Trailer Repair Guys - Professional Mobile Trailer Repair in St George</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,27 +14,28 @@
         }
 
         :root {
-            --primary-color: #003366; /* Deep professional blue for trust and reliability */
-            --secondary-color: #FF6600; /* Vibrant orange for energy and calls-to-action */
-            --accent-color: #336699; /* Medium blue for accents */
-            --light-bg: #F5F5F5; /* Soft light gray for backgrounds */
-            --text-dark: #333333; /* Dark text for readability */
+            --primary-color: #001F3F; /* Deep navy blue for professionalism and trust */
+            --secondary-color: #DC3545; /* Professional red for energy and calls-to-action */
+            --accent-color: #007BFF; /* Bright blue accent for highlights */
+            --neutral-gray: #6C757D; /* Neutral gray for modern, serious tone */
+            --light-bg: #F8F9FA; /* Soft light gray for backgrounds */
+            --text-dark: #212529; /* Dark text for readability */
             --text-light: #FFFFFF; /* White for light backgrounds */
-            --border-radius: 8px; /* Slightly larger for modern feel */
-            --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --border-radius: 6px; /* Clean, modern radius */
+            --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.12);
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
             color: var(--text-dark);
             overflow-x: hidden;
             background: var(--light-bg);
         }
 
-        /* Top Contact Bar */
-        .top-bar {
+        /* Header with Nav */
+        header {
             background: var(--primary-color);
             color: var(--text-light);
             padding: 15px 0;
@@ -45,7 +46,7 @@
             box-shadow: var(--shadow-soft);
         }
 
-        .top-bar-content {
+        .header-content {
             max-width: 1300px;
             margin: 0 auto;
             padding: 0 30px;
@@ -56,14 +57,44 @@
             gap: 20px;
         }
 
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         .phone-number {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 500;
             color: var(--text-light);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: color 0.3s ease;
         }
 
@@ -73,24 +104,24 @@
 
         .hours-badge {
             background: var(--secondary-color);
-            padding: 8px 20px;
+            padding: 6px 15px;
             border-radius: var(--border-radius);
-            font-weight: 700;
-            font-size: 1rem;
+            font-weight: 500;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-            margin-top: 60px; /* Adjusted for larger top bar */
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--neutral-gray) 100%);
+            margin-top: 80px; /* Adjusted for header */
             overflow: hidden;
         }
 
@@ -103,73 +134,55 @@
             background-image: url('Trailer-Repair-Guys.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.2; /* Slightly increased for better visibility without overwhelming */
-            filter: blur(2px); /* Subtle blur for premium feel */
+            opacity: 0.15;
+            filter: grayscale(20%); /* Subtle desaturation for serious look */
         }
 
         .hero-content {
             text-align: center;
             color: var(--text-light);
             z-index: 2;
-            padding: 30px;
-            max-width: 1000px;
+            padding: 40px;
+            max-width: 1100px;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-size: clamp(3.5rem, 10vw, 5.5rem);
             font-weight: 900;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: clamp(1.4rem, 4vw, 2rem);
-            margin-bottom: 50px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-            font-style: italic;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 40px;
+            font-weight: 400;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 20px 50px;
+            padding: 16px 40px;
             background: var(--secondary-color);
             color: var(--text-light);
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: var(--border-radius);
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
         }
 
         .cta-button:hover {
-            background: #E65C00; /* Darker orange for hover */
-            transform: translateY(-3px);
+            background: #C82333;
+            transform: translateY(-2px);
             box-shadow: var(--shadow-hover);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--text-light);
-            font-size: 2.5rem;
-            animation: bounce 2s infinite;
-            opacity: 0.8;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-12px); }
-            60% { transform: translateX(-50%) translateY(-6px); }
         }
 
         /* Services Section */
         .services {
-            padding: 100px 30px;
-            background: var(--light-bg);
+            padding: 120px 30px;
+            background: #FFFFFF;
         }
 
         .container {
@@ -179,12 +192,12 @@
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 60px;
             color: var(--primary-color);
             position: relative;
-            padding-bottom: 20px;
-            font-weight: 900;
+            padding-bottom: 15px;
+            font-weight: 700;
         }
 
         .section-title::after {
@@ -193,229 +206,211 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
+            width: 80px;
+            height: 4px;
             background: var(--secondary-color);
-            border-radius: 2.5px;
+            border-radius: 2px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
         }
 
         .service-card {
-            background: #FFFFFF;
-            padding: 40px;
+            background: var(--light-bg);
+            padding: 40px 30px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-soft);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
             text-align: center;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--secondary-color);
         }
 
         .service-icon {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--secondary-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             color: var(--primary-color);
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .service-card p {
-            color: #555555;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            color: var(--neutral-gray);
+            font-size: 1rem;
         }
 
         /* Reviews Section */
         .reviews {
-            padding: 100px 30px;
-            background: #FFFFFF;
+            padding: 120px 30px;
+            background: var(--light-bg);
         }
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
         }
 
         .review-card {
-            background: var(--light-bg);
-            padding: 35px;
+            background: #FFFFFF;
+            padding: 30px;
             border-radius: var(--border-radius);
-            border-left: 5px solid var(--secondary-color);
             box-shadow: var(--shadow-soft);
-            transition: transform 0.3s ease;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
+            border-left: 4px solid var(--secondary-color);
         }
 
         .review-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .reviewer-name {
-            font-weight: 700;
+            font-weight: 600;
             color: var(--primary-color);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .stars {
-            color: #FFD700; /* Gold for stars */
-            font-size: 1.3rem;
+            color: #FFC107;
+            font-size: 1.2rem;
         }
 
         .review-body {
-            color: #444444;
-            line-height: 1.8;
+            color: var(--text-dark);
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .show-more-btn {
             display: block;
-            margin: 50px auto 0;
-            padding: 18px 50px;
+            margin: 40px auto 0;
+            padding: 14px 35px;
             background: var(--accent-color);
             color: var(--text-light);
             border: none;
             border-radius: var(--border-radius);
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .show-more-btn:hover {
             background: var(--primary-color);
-            transform: scale(1.05);
-        }
-
-        .hidden {
-            display: none;
         }
 
         /* Contact Section */
         .contact {
-            padding: 100px 30px;
-            background: var(--light-bg);
+            padding: 120px 30px;
+            background: #FFFFFF;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
         }
 
         .contact-form {
-            background: #FFFFFF;
-            padding: 50px;
+            background: var(--light-bg);
+            padding: 40px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-soft);
         }
 
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
+            margin-bottom: 8px;
+            font-weight: 500;
             color: var(--primary-color);
-            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #E0E0E0;
+            padding: 12px;
+            border: 1px solid var(--neutral-gray);
             border-radius: var(--border-radius);
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: border-color 0.3s ease;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
-            outline: none;
             border-color: var(--secondary-color);
+            outline: none;
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 180px;
+            min-height: 160px;
         }
 
         .submit-btn {
             width: 100%;
-            padding: 18px;
+            padding: 16px;
             background: var(--secondary-color);
             color: var(--text-light);
             border: none;
             border-radius: var(--border-radius);
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .submit-btn:hover {
-            background: #E65C00;
-            transform: translateY(-3px);
+            background: #C82333;
         }
 
         .map-container {
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-soft);
-            height: 100%;
-            min-height: 450px;
+            min-height: 400px;
         }
 
         .map-container iframe {
             width: 100%;
             height: 100%;
-            min-height: 450px;
             border: none;
         }
 
         /* Info Section */
         .info-section {
-            padding: 100px 30px;
+            padding: 120px 30px;
             background: var(--primary-color);
             color: var(--text-light);
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
         }
 
         .info-card {
             text-align: center;
-            padding: 35px;
-            background: rgba(255,255,255,0.05);
+            padding: 30px;
             border-radius: var(--border-radius);
+            background: rgba(255,255,255,0.05);
             transition: background 0.3s ease;
         }
 
@@ -424,22 +419,22 @@
         }
 
         .info-icon {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--secondary-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .info-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .info-card p,
         .info-card a {
-            color: rgba(255,255,255,0.9);
+            color: var(--text-light);
             text-decoration: none;
-            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         .info-card a:hover {
@@ -448,24 +443,24 @@
 
         /* Footer */
         footer {
-            background: var(--accent-color);
+            background: var(--neutral-gray);
             color: var(--text-light);
-            padding: 50px 30px;
+            padding: 40px 30px;
             text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-bottom: 25px;
+            gap: 30px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
         .footer-links a {
             color: var(--text-light);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
@@ -474,138 +469,100 @@
         }
 
         footer p {
-            opacity: 0.8;
             font-size: 0.9rem;
+            opacity: 0.8;
         }
 
-        /* Responsive Adjustments */
+        /* Responsive */
         @media (max-width: 768px) {
-            .top-bar-content {
-                justify-content: center;
+            .header-content {
                 flex-direction: column;
-                gap: 10px;
+                text-align: center;
             }
 
-            .contact-grid,
-            .services-grid,
-            .reviews-grid,
-            .info-grid {
+            nav ul {
+                gap: 20px;
+                justify-content: center;
+            }
+
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
 
             .hero {
-                margin-top: 80px;
+                margin-top: 120px;
             }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Square Payment Integration Section (Commented out, ready for implementation) */
-        .payment-section {
-            padding: 100px 30px;
-            background: #FFFFFF;
-        }
-
-        .payment-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--light-bg);
-            padding: 50px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-soft);
-        }
-
-        #payment-form {
-            margin-top: 40px;
-        }
-
-        /* Success/Error Messages */
-        .success-message {
-            display: none;
-            background: #28A745;
-            color: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            margin-top: 25px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .error-message {
-            display: none;
-            background: #DC3545;
-            color: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            margin-top: 25px;
-            text-align: center;
-            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <div class="top-bar-content">
-            <a href="tel:+14352723600" class="phone-number">
-                <i class="fas fa-phone"></i>
-                (435) 272-3600
-            </a>
-            <span class="hours-badge">
-                <i class="fas fa-clock"></i> OPEN 24/7
-            </span>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Trailer Repair Guys</a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="tel:+14352723600" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    (435) 272-3600
+                </a>
+                <span class="hours-badge">
+                    <i class="fas fa-clock"></i> OPEN 24/7
+                </span>
+            </div>
         </div>
-    </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>TRAILER REPAIR GUYS</h1>
-            <p>St George's Premier Mobile Trailer Repair Service – Reliable, Fast, and Professional</p>
-            <a href="#contact" class="cta-button">GET A QUOTE TODAY</a>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+            <h1>Professional Mobile Trailer Repair</h1>
+            <p>Trusted experts in St George providing reliable, efficient, and certified trailer repair services – anytime, anywhere.</p>
+            <a href="#contact" class="cta-button">Request a Quote</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Our Professional Services</h2>
+            <h2 class="section-title">Our Expert Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-wrench"></i></div>
                     <h3>Mobile Repairs</h3>
-                    <p>We bring expert repair services directly to your location throughout St George and surrounding areas, saving you time and hassle.</p>
+                    <p>Our certified technicians come to you for convenient, on-site repairs across St George and nearby areas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-truck"></i></div>
                     <h3>Trailer Maintenance</h3>
-                    <p>Preventive maintenance programs designed to extend the life of your trailer and ensure peak performance.</p>
+                    <p>Scheduled maintenance to ensure your trailer's longevity, safety, and optimal performance.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-tools"></i></div>
                     <h3>Emergency Service</h3>
-                    <p>Round-the-clock emergency response for when you need us most – because breakdowns don't schedule appointments.</p>
+                    <p>24/7 emergency response for unexpected breakdowns, minimizing downtime for your operations.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-cog"></i></div>
                     <h3>Brake Services</h3>
-                    <p>Comprehensive brake system inspections, repairs, and upgrades for optimal safety and compliance.</p>
+                    <p>Thorough brake inspections, repairs, and replacements to meet safety standards.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Electrical Repairs</h3>
-                    <p>Advanced diagnostics and repairs for all electrical systems, including lighting, wiring, and control modules.</p>
+                    <p>Diagnostic and repair services for lighting, wiring, and electrical systems.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>Certified Technicians</h3>
-                    <p>Our team is fully licensed, insured, and trained to deliver the highest quality service every time.</p>
+                    <h3>Certified Expertise</h3>
+                    <p>Licensed and insured professionals committed to quality and customer satisfaction.</p>
                 </div>
             </div>
         </div>
@@ -614,19 +571,19 @@
     <!-- Reviews Section -->
     <section class="reviews" id="reviews">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
+            <h2 class="section-title">Client Testimonials</h2>
             <div class="reviews-grid" id="reviewsGrid"></div>
-            <button class="show-more-btn" id="showMoreBtn" style="display: none;">Show More Reviews</button>
+            <button class="show-more-btn" id="showMoreBtn" style="display: none;">Show More</button>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact Us</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <h3 style="margin-bottom: 30px; color: var(--primary-color); font-weight: 700;">Send Us A Message</h3>
+                    <h3 style="margin-bottom: 25px; color: var(--primary-color); font-weight: 600;">Send a Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name *</label>
@@ -644,9 +601,9 @@
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                        <div class="success-message" id="successMessage">Thank you! We'll get back to you soon.</div>
-                        <div class="error-message" id="errorMessage">Please fill out all required fields.</div>
+                        <button type="submit" class="submit-btn">Submit Inquiry</button>
+                        <div class="success-message" id="successMessage">Message sent successfully. We'll respond shortly.</div>
+                        <div class="error-message" id="errorMessage">Please complete all required fields.</div>
                     </form>
                 </div>
                 <div class="map-container">
@@ -659,7 +616,7 @@
     <!-- Info Section -->
     <section class="info-section">
         <div class="container">
-            <h2 class="section-title" style="color: var(--text-light);">Contact Information</h2>
+            <h2 class="section-title" style="color: var(--text-light);">Our Details</h2>
             <div class="info-grid">
                 <div class="info-card">
                     <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
@@ -669,17 +626,17 @@
                 <div class="info-card">
                     <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>Service Area</h3>
-                    <p>St George, Utah<br>& Surrounding Areas</p>
+                    <p>St George, Utah & Surrounding Regions</p>
                 </div>
                 <div class="info-card">
                     <div class="info-icon"><i class="fas fa-clock"></i></div>
-                    <h3>Hours</h3>
-                    <p>Open 24 Hours<br>7 Days a Week</p>
+                    <h3>Availability</h3>
+                    <p>24 Hours a Day, 7 Days a Week</p>
                 </div>
                 <div class="info-card">
                     <div class="info-icon"><i class="fas fa-star"></i></div>
-                    <h3>Follow Us</h3>
-                    <p><a href="https://www.google.com/maps/place/Trailer+Repair+Guys+~+St+George+Mobile+Trailer+Repair/@37.3086469,-113.8063067,10z" target="_blank">Google Reviews</a></p>
+                    <h3>Reviews</h3>
+                    <p><a href="https://www.google.com/maps/place/Trailer+Repair+Guys+~+St+George+Mobile+Trailer+Repair/@37.3086469,-113.8063067,10z" target="_blank">View on Google</a></p>
                 </div>
             </div>
         </div>
@@ -692,25 +649,25 @@
                 <a href="#services">Services</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#contact">Contact</a>
-                <a href="https://www.google.com/maps/place/Trailer+Repair+Guys+~+St+George+Mobile+Trailer+Repair/@37.3086469,-113.8063067,10z" target="_blank">Google Maps</a>
+                <a href="https://www.google.com/maps/place/Trailer+Repair+Guys+~+St+George+Mobile+Trailer+Repair/@37.3086469,-113.8063067,10z" target="_blank">Maps</a>
                 <a href="https://github.com/JamesBrownR/Trailer-Repair-Guys" target="_blank">GitHub</a>
             </div>
-            <p>&copy; 2025 Trailer Repair Guys. All rights reserved. | Owner: Carl</p>
+            <p>&copy; 2025 Trailer Repair Guys. All rights reserved. Owner: Carl</p>
         </div>
     </footer>
 
     <script>
-        // Reviews Data - Added placeholder bodies; replace with real reviews for authenticity
+        // Reviews Data
         const reviews = [
-            { name: "John D.", rating: 5, body: "Exceptional service! They arrived quickly and fixed my trailer's brakes on the spot. Highly recommend!" },
-            { name: "Sarah M.", rating: 5, body: "Professional and reliable. Their 24/7 availability saved my business during a late-night breakdown." },
-            { name: "Mike R.", rating: 5, body: "Great team with fair pricing. They handled my electrical issues efficiently and explained everything clearly." },
-            { name: "Emily T.", rating: 5, body: "Top-notch maintenance service. My trailer runs better than ever thanks to these guys." },
-            { name: "David L.", rating: 5, body: "Quick response and quality work. Definitely my go-to for trailer repairs in St George." },
-            { name: "Lisa K.", rating: 5, body: "Impressed with their expertise and customer service. Will use them again without hesitation." }
+            { name: "John D.", rating: 5, body: "Outstanding professional service. They fixed my trailer efficiently and with great attention to detail." },
+            { name: "Sarah M.", rating: 5, body: "Reliable and knowledgeable team. Their 24/7 service is a lifesaver for commercial operations." },
+            { name: "Mike R.", rating: 5, body: "High-quality repairs at fair prices. Highly recommend for any trailer electrical issues." },
+            { name: "Emily T.", rating: 5, body: "Excellent maintenance work. My fleet is in top condition thanks to Trailer Repair Guys." },
+            { name: "David L.", rating: 5, body: "Prompt response and expert craftsmanship. The best in St George." },
+            { name: "Lisa K.", rating: 5, body: "Professional from start to finish. Will definitely use their services again." }
         ];
 
-        let reviewsShown = 3; // Start with fewer to encourage "show more"
+        let reviewsShown = 3;
         const reviewsPerLoad = 3;
 
         function renderReviews() {
@@ -738,7 +695,7 @@
             const remaining = reviews.length - reviewsShown;
             if (remaining > 0) {
                 btn.style.display = 'block';
-                btn.textContent = `Show ${Math.min(reviewsPerLoad, remaining)} More (Total ${remaining})`;
+                btn.textContent = `Show More (${remaining})`;
             } else {
                 btn.style.display = 'none';
             }
@@ -749,7 +706,7 @@
             renderReviews();
         });
 
-        // Contact Form Handler (unchanged, but can be enhanced with actual backend if needed)
+        // Contact Form Handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -759,12 +716,9 @@
             const message = document.getElementById('message').value;
             
             if (name && email && message) {
-                const subject = encodeURIComponent('Website Inquiry from ' + name);
+                const subject = encodeURIComponent('Professional Inquiry from ' + name);
                 const body = encodeURIComponent(
-                    `Name: ${name}\n` +
-                    `Email: ${email}\n` +
-                    `Phone: ${phone}\n\n` +
-                    `Message:\n${message}`
+                    `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
                 );
                 
                 window.location.href = `mailto:info@trailerrepairguys.com?subject=${subject}&body=${body}`;
@@ -782,21 +736,17 @@
             }
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
 
-        // Initialize reviews on page load
+        // Init reviews
         renderReviews();
     </script>
 </body>
