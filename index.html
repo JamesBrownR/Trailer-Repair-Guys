@@ -12,15 +12,18 @@
             box-sizing: border-box;
         }
 
-       :root {
+  
    :root {
             --primary-navy: #1e3a8a;
-            --secondary-red: #3b82f6;
-            --accent-blue: #ef4444;
-            --light-gray: #f5f5f5;
+            --secondary-blue: #3b82f6;
+          --accent-red: #ef4444;
+            --light-gray: #f3f4f6;
             --dark-gray: #424242;
             --white: #ffffff;
---hero-gradient: #3b82f6;        }
+--hero-gradient: #3b82f6;       
+   }
+
+           
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -71,11 +74,11 @@
         }
 
         .phone-header:hover {
-            color: #4dabf7;
+           color: var(--secondary-blue);
         }
 
         .hours-badge {
-            background: var(--secondary-red);
+            background: var(--accent-red);
             color: var(--white);
             padding: 0.5rem 1rem;
             border-radius: 25px;
@@ -172,7 +175,7 @@
 
         .cta-button {
             display: inline-block;
-            background: var(--secondary-red);
+            background: var(--accent-red);
             color: var(--white);
             padding: 1rem 3rem;
             text-decoration: none;
@@ -260,7 +263,7 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 10px;
-            border-left: 4px solid var(--secondary-red);
+            border-left: 4px solid var(--accent-red);
             transition: all 0.3s;
         }
 
@@ -287,7 +290,7 @@
 
         .service-card li:before {
             content: "✓ ";
-            color: var(--secondary-red);
+            color: var(--accent-red);
             font-weight: bold;
             margin-right: 0.5rem;
         }
@@ -368,7 +371,7 @@
 
         .contact-icon {
             font-size: 2.5rem;
-            color: var(--secondary-red);
+            color: var(--accent-red);
             margin-bottom: 1rem;
         }
 
@@ -385,7 +388,7 @@
         }
 
         .contact-card a:hover {
-            color: var(--secondary-red);
+            color: var(--accent-red);
         }
 
         /* Footer */
