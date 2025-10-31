@@ -364,20 +364,27 @@
             margin-right: 0.5rem;
         }
 
-        .header-logo {
-    max-width: 200px; /* Adjust size as needed; keeps it compact for header */
+      .logo-link {
+    display: inline-block; /* Changed to inline-block to contain the background */
+    background: var(--white); /* White background */
+    padding: 10px; /* Space around the logo to create the "square" effect */
+    border-radius: 0; /* Square corners, matching your preference */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow for depth */
+    line-height: 0; /* Removes extra spacing */
+}
+
+.header-logo {
+    max-width: 200px; /* Adjust to control logo size */
     height: auto;
     display: block;
 }
 
-.logo-link {
-    display: block;
-    line-height: 0; /* Removes any extra spacing */
-}
-
 @media (max-width: 768px) {
+    .logo-link {
+        padding: 8px; /* Slightly smaller on mobile */
+    }
     .header-logo {
-        max-width: 150px; /* Smaller on mobile for better fit */
+        max-width: 150px;
     }
 }
 
