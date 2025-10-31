@@ -295,6 +295,23 @@
             margin-right: 0.5rem;
         }
 
+        .header-logo {
+    max-width: 200px; /* Adjust size as needed; keeps it compact for header */
+    height: auto;
+    display: block;
+}
+
+.logo-link {
+    display: block;
+    line-height: 0; /* Removes any extra spacing */
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        max-width: 150px; /* Smaller on mobile for better fit */
+    }
+}
+
         /* Gallery Section */
         .gallery {
             background: var(--white);
@@ -390,6 +407,65 @@
         .contact-card a:hover {
             color: var(--accent-red);
         }
+        .tagline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 2.5rem;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between items */
+    opacity: 0.95;
+}
+
+.tagline-list li {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1); /* Subtle semi-transparent background for depth */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0; /* Square, matching your preference */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between icon and text */
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for pop */
+    animation: fadeInUp 0.8s ease forwards; /* Fade-in animation */
+}
+
+.tagline-list li:hover {
+    transform: translateY(-3px); /* Lift on hover for interactivity */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tagline-icon {
+    color: var(--secondary-red); /* Accent color for icons; change to match your scheme if needed */
+    font-size: 1.2em;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger the animation for each item */
+.tagline-list li:nth-child(1) { animation-delay: 0.2s; }
+.tagline-list li:nth-child(2) { animation-delay: 0.4s; }
+.tagline-list li:nth-child(3) { animation-delay: 0.6s; }
+
+@media (max-width: 768px) {
+    .tagline-list {
+        flex-direction: column; /* Stack vertically on small screens */
+        gap: 1rem;
+    }
+}
 
         /* Footer */
         footer {
@@ -462,7 +538,9 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <div class="logo-text"></div>
+           <a href="#" class="logo-link"> <!-- Wrap in a link to make it clickable, pointing to home -->
+    <img src="https://raw.githubusercontent.com/JamesBrownR/Trailer-Repair-Guys/main/Trailer-Repair-Guys.png" alt="Trailer Repair Guys Logo" class="header-logo">
+</a>
             <div class="contact-header">
                 <a href="tel:4352723600" class="phone-header">
                     <i class="fas fa-phone"></i>
@@ -480,7 +558,11 @@
         <div class="hero-content">
             <img src="https://raw.githubusercontent.com/JamesBrownR/Trailer-Repair-Guys/main/Trailer-Repair-Guys.png" alt="Trailer Repair Guys Logo" class="hero-logo">
             <h1></h1>
-            <p>20 Years of Experience • Professional Service • No Towing Required</p>
+           <ul class="tagline-list">
+    <li><i class="fas fa-star tagline-icon"></i> 20 Years of Experience</li>
+    <li><i class="fas fa-tools tagline-icon"></i> Professional Service</li>
+    <li><i class="fas fa-truck tagline-icon"></i> No Towing Required</li>
+</ul>
             <a href="tel:4352723600" class="cta-button">Call Now: (435) 272-3600</a>
         </div>
     </section>
