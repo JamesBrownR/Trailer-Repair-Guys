@@ -818,7 +818,7 @@
             stars.innerHTML = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
 
             const text = document.createElement('p');
-            text.textContent = review.text;
+            text.textContent = review.body;
 
             const author = document.createElement('div');
             author.className = 'author';
