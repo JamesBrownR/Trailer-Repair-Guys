@@ -12,16 +12,15 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-navy: #2c3e50;
-            --secondary-red: #c62828;
-            --accent-blue: #0052cc;
-            --light-gray: #f5f5f5;
-            --dark-gray: #424242;
-            --white: #ffffff;
-            --hero-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-        }
-
+       :root {
+    --primary-blue: #1e3a8a; /* Deeper blue inspired by logo, replacing navy for headers/backgrounds */
+    --secondary-blue: #3b82f6; /* Brighter blue matching logo's royal blue for accents/hovers */
+    --accent-red: #ef4444; /* Softer red for CTAs, less harsh to blend with blues */
+    --light-gray: #f3f4f6; /* Slightly cooler gray to match blue tones */
+    --dark-gray: #374151; /* Cooler dark gray */
+    --white: #ffffff;
+    --hero-gradient: linear-gradient(135deg, #111827 0%, #1e3a8a 50%, #3b82f6 100%); /* Black-to-blue gradient to echo logo's black background */
+}
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -109,14 +108,14 @@
             z-index: 1;
         }
 
-        .hero-logo {
-            max-width: 450px;
-            width: 85%;
-            height: auto;
-            margin: 0 auto 2.5rem;
-            display: block;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-        }
+       .hero-logo {
+    max-width: 600px; /* Increased from 450px */
+    width: 90%; /* Slightly wider on smaller screens */
+    height: auto;
+    margin: 0 auto 2.5rem;
+    display: block;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
 
         .hero h1 {
             font-size: clamp(2.2rem, 5vw, 1.8rem);
@@ -134,6 +133,42 @@
             margin-right: auto;
             opacity: 0.95;
         }
+        /* Reviews Section */
+.reviews {
+    background: var(--light-gray);
+    padding: 80px 2rem;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.review-card .stars {
+    color: #ffd700; /* Gold for stars */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.review-card p {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.review-card .author {
+    font-weight: bold;
+    color: var(--primary-navy);
+    text-align: right;
+}
 
         .cta-button {
             display: inline-block;
@@ -535,6 +570,63 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+<section class="reviews" id="reviews">
+    <div class="container">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="reviews-grid" id="reviews-grid">
+          <script>
+    const reviews = [
+        {
+            name: "John Doe",
+            rating: 5,
+            text: "Excellent service! They came to my location and fixed my trailer brakes in no time. Highly recommend!"
+        },
+        {
+            name: "Jane Smith",
+            rating: 4,
+            text: "Great pricing and professional work. The mobile service saved me a ton of hassle."
+        },
+        {
+            name: "Mike Johnson",
+            rating: 5,
+            text: "Available 24/7 and very knowledgeable. Fixed my roof leak perfectly."
+        }
+        // Add more reviews here easily, e.g.:
+        // { name: "New Customer", rating: 5, text: "Amazing job!" }
+    ];
+
+    function renderReviews() {
+        const grid = document.getElementById('reviews-grid');
+        reviews.forEach(review => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+
+            const stars = document.createElement('div');
+            stars.className = 'stars';
+            stars.innerHTML = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+
+            const text = document.createElement('p');
+            text.textContent = review.text;
+
+            const author = document.createElement('div');
+            author.className = 'author';
+            author.textContent = `- ${review.name}`;
+
+            card.appendChild(stars);
+            card.appendChild(text);
+            card.appendChild(author);
+            grid.appendChild(card);
+        });
+    }
+
+    // Call the function when the page loads
+    window.addEventListener('DOMContentLoaded', renderReviews);
+</script>
+        </div>
+    </div>
+</section>
+
     <!-- About Section -->
     <section class="about">
         <div class="about-content">
@@ -577,10 +669,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Trailer Repair Guys. All Rights Reserved.</p>
-        <p>Professional Mobile Trailer Repair Services in Southern Utah</p>
-    </footer>
+   <footer>
+    <p>&copy; 2025 Trailer Repair Guys. All Rights Reserved.</p>
+    <p>Professional Mobile Trailer Repair Services in Southern Utah</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100094472803970" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/trailerrepairguys/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
 </body>
 </html>
